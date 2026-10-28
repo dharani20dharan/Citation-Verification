@@ -1,0 +1,1428 @@
+{
+  "pipeline_version": "1.0.0-stage10c",
+  "benchmark_version": "1.0.0-stage11",
+  "timestamp": "2026-09-29 10:57:51",
+  "metrics": {
+    "total_cases": 16,
+    "passed_cases": 16,
+    "failed_cases": 0,
+    "pass_rate": 1.0,
+    "verdict_accuracy": 1.0,
+    "reference_resolution_accuracy": 1.0,
+    "source_availability_accuracy": 1.0,
+    "conclusive_classification_accuracy": 1.0,
+    "stage_error_counts": {},
+    "error_taxonomy_counts": {},
+    "confusion_matrix": {
+      "labels": [
+        "supported",
+        "unsupported",
+        "partially_correct",
+        "not_found",
+        "insufficient_evidence",
+        "wrong_reference"
+      ],
+      "matrix": {
+        "supported": {
+          "supported": 3,
+          "unsupported": 0,
+          "partially_correct": 0,
+          "wrong_reference": 0,
+          "not_found": 0,
+          "insufficient_evidence": 0
+        },
+        "unsupported": {
+          "supported": 0,
+          "unsupported": 2,
+          "partially_correct": 0,
+          "wrong_reference": 0,
+          "not_found": 0,
+          "insufficient_evidence": 0
+        },
+        "partially_correct": {
+          "supported": 0,
+          "unsupported": 0,
+          "partially_correct": 1,
+          "wrong_reference": 0,
+          "not_found": 0,
+          "insufficient_evidence": 0
+        },
+        "wrong_reference": {
+          "supported": 0,
+          "unsupported": 0,
+          "partially_correct": 0,
+          "wrong_reference": 0,
+          "not_found": 0,
+          "insufficient_evidence": 0
+        },
+        "not_found": {
+          "supported": 0,
+          "unsupported": 0,
+          "partially_correct": 0,
+          "wrong_reference": 0,
+          "not_found": 4,
+          "insufficient_evidence": 0
+        },
+        "insufficient_evidence": {
+          "supported": 0,
+          "unsupported": 0,
+          "partially_correct": 0,
+          "wrong_reference": 0,
+          "not_found": 0,
+          "insufficient_evidence": 6
+        }
+      }
+    }
+  },
+  "results": [
+    {
+      "case_id": "bench_legal_01_sec_3d_exact",
+      "domain": "legal",
+      "category": "reference_correctness",
+      "passed": true,
+      "expected_verdict": "supported",
+      "actual_verdict": "supported",
+      "expected_reference_status": "exact_match",
+      "actual_reference_status": "exact_match",
+      "expected_source_status": "available",
+      "actual_source_status": "available",
+      "expected_conclusive": true,
+      "actual_conclusive": true,
+      "confidence": 0.9,
+      "evidence_ids": [
+        "legal_sample_fixture_sec_3_d_chunk_001",
+        "legal_sample_fixture_sec_3_d_chunk_002",
+        "legal_sample_fixture_sec_3_d_chunk_003",
+        "legal_sample_fixture_sec_3_d",
+        "legal_sample_fixture_sec_001_legal_analysis_the_patents_act_1970"
+      ],
+      "eligible_evidence_ids": [
+        "legal_sample_fixture_sec_3_d_chunk_001",
+        "legal_sample_fixture_sec_3_d_chunk_002",
+        "legal_sample_fixture_sec_3_d_chunk_003"
+      ],
+      "evidence_trace": {
+        "claim": "In Novartis AG v. Union of India, the Supreme Court upheld Section 3(d).",
+        "reference": "Section 3(d)",
+        "reference_resolution": {
+          "status": "not_applicable",
+          "matched_entry_ids": []
+        },
+        "retrieved_candidates": [
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d_chunk_001",
+            "match_type": "exact",
+            "score": 1.0,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d_chunk_002",
+            "match_type": "exact",
+            "score": 1.0,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d_chunk_003",
+            "match_type": "exact",
+            "score": 1.0,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d",
+            "match_type": "exact",
+            "score": 1.0,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_001_legal_analysis_the_patents_act_1970",
+            "match_type": "semantic",
+            "score": 0.5473078489303589,
+            "document_id": "legal_sample_fixture"
+          }
+        ],
+        "eligible_candidates": [
+          "legal_sample_fixture_sec_3_d_chunk_001",
+          "legal_sample_fixture_sec_3_d_chunk_002",
+          "legal_sample_fixture_sec_3_d_chunk_003"
+        ],
+        "selected_evidence": [
+          "legal_sample_fixture_sec_3_d_chunk_001",
+          "legal_sample_fixture_sec_3_d_chunk_002",
+          "legal_sample_fixture_sec_3_d_chunk_003",
+          "legal_sample_fixture_sec_3_d",
+          "legal_sample_fixture_sec_001_legal_analysis_the_patents_act_1970"
+        ],
+        "source_attribution": {
+          "source_availability": "available",
+          "eligible_count": 3
+        },
+        "final_verdict": "supported",
+        "reasoning": "The cited reference 'Section 3(d)' was found exactly. The retrieved provision verbatim corroborates the substantive statement made in the claim."
+      },
+      "failure_diagnosis": null,
+      "reasoning": "The cited reference 'Section 3(d)' was found exactly. The retrieved provision verbatim corroborates the substantive statement made in the claim."
+    },
+    {
+      "case_id": "bench_legal_02_sec_9_missing",
+      "domain": "legal",
+      "category": "reference_correctness",
+      "passed": true,
+      "expected_verdict": "not_found",
+      "actual_verdict": "not_found",
+      "expected_reference_status": "not_found",
+      "actual_reference_status": "not_found",
+      "expected_source_status": "available",
+      "actual_source_status": "available",
+      "expected_conclusive": true,
+      "actual_conclusive": true,
+      "confidence": 0.95,
+      "evidence_ids": [
+        "legal_sample_fixture_sec_3_d_chunk_002",
+        "legal_sample_fixture_sec_3_d_chunk_003",
+        "legal_sample_fixture_sec_3_d_chunk_001",
+        "legal_sample_fixture_sec_3_d",
+        "legal_sample_fixture_sec_001_legal_analysis_the_patents_act_1970"
+      ],
+      "eligible_evidence_ids": [
+        "legal_sample_fixture_sec_3_d_chunk_002",
+        "legal_sample_fixture_sec_3_d_chunk_003",
+        "legal_sample_fixture_sec_3_d_chunk_001"
+      ],
+      "evidence_trace": {
+        "claim": "Section 9 provides for compulsory provisional specifications within twelve months.",
+        "reference": "Section 9",
+        "reference_resolution": {
+          "status": "not_applicable",
+          "matched_entry_ids": []
+        },
+        "retrieved_candidates": [
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d_chunk_002",
+            "match_type": "semantic",
+            "score": 0.4277242422103882,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d_chunk_003",
+            "match_type": "semantic",
+            "score": 0.40626996755599976,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d_chunk_001",
+            "match_type": "semantic",
+            "score": 0.38694727420806885,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d",
+            "match_type": "semantic",
+            "score": 0.5112559795379639,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_001_legal_analysis_the_patents_act_1970",
+            "match_type": "semantic",
+            "score": 0.49081456661224365,
+            "document_id": "legal_sample_fixture"
+          }
+        ],
+        "eligible_candidates": [
+          "legal_sample_fixture_sec_3_d_chunk_002",
+          "legal_sample_fixture_sec_3_d_chunk_003",
+          "legal_sample_fixture_sec_3_d_chunk_001"
+        ],
+        "selected_evidence": [
+          "legal_sample_fixture_sec_3_d_chunk_002",
+          "legal_sample_fixture_sec_3_d_chunk_003",
+          "legal_sample_fixture_sec_3_d_chunk_001",
+          "legal_sample_fixture_sec_3_d",
+          "legal_sample_fixture_sec_001_legal_analysis_the_patents_act_1970"
+        ],
+        "source_attribution": {
+          "source_availability": "available",
+          "eligible_count": 3
+        },
+        "final_verdict": "not_found",
+        "reasoning": "The cited reference 'Section 9' (9) was not found in the evidence corpus. Semantic similarity candidates cannot substitute for the missing cited reference."
+      },
+      "failure_diagnosis": null,
+      "reasoning": "The cited reference 'Section 9' (9) was not found in the evidence corpus. Semantic similarity candidates cannot substitute for the missing cited reference."
+    },
+    {
+      "case_id": "bench_legal_03_sec_3e_wrong_ref",
+      "domain": "legal",
+      "category": "reference_correctness",
+      "passed": true,
+      "expected_verdict": "not_found",
+      "actual_verdict": "not_found",
+      "expected_reference_status": "not_found",
+      "actual_reference_status": "not_found",
+      "expected_source_status": "available",
+      "actual_source_status": "available",
+      "expected_conclusive": true,
+      "actual_conclusive": true,
+      "confidence": 0.95,
+      "evidence_ids": [
+        "legal_sample_fixture_sec_3_d_chunk_002",
+        "legal_sample_fixture_sec_3_d_chunk_001",
+        "legal_sample_fixture_sec_3_d_chunk_003",
+        "legal_sample_fixture_sec_3_d",
+        "legal_sample_fixture_sec_001_legal_analysis_the_patents_act_1970"
+      ],
+      "eligible_evidence_ids": [
+        "legal_sample_fixture_sec_3_d_chunk_002",
+        "legal_sample_fixture_sec_3_d_chunk_001",
+        "legal_sample_fixture_sec_3_d_chunk_003"
+      ],
+      "evidence_trace": {
+        "claim": "Section 3(e) prohibits patenting of mere admixtures resulting only in aggregation of properties.",
+        "reference": "Section 3(e)",
+        "reference_resolution": {
+          "status": "not_applicable",
+          "matched_entry_ids": []
+        },
+        "retrieved_candidates": [
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d_chunk_002",
+            "match_type": "semantic",
+            "score": 0.7015851736068726,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d_chunk_001",
+            "match_type": "semantic",
+            "score": 0.63236403465271,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d_chunk_003",
+            "match_type": "semantic",
+            "score": 0.5185083150863647,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d",
+            "match_type": "semantic",
+            "score": 0.561082124710083,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_001_legal_analysis_the_patents_act_1970",
+            "match_type": "semantic",
+            "score": 0.5485517978668213,
+            "document_id": "legal_sample_fixture"
+          }
+        ],
+        "eligible_candidates": [
+          "legal_sample_fixture_sec_3_d_chunk_002",
+          "legal_sample_fixture_sec_3_d_chunk_001",
+          "legal_sample_fixture_sec_3_d_chunk_003"
+        ],
+        "selected_evidence": [
+          "legal_sample_fixture_sec_3_d_chunk_002",
+          "legal_sample_fixture_sec_3_d_chunk_001",
+          "legal_sample_fixture_sec_3_d_chunk_003",
+          "legal_sample_fixture_sec_3_d",
+          "legal_sample_fixture_sec_001_legal_analysis_the_patents_act_1970"
+        ],
+        "source_attribution": {
+          "source_availability": "available",
+          "eligible_count": 3
+        },
+        "final_verdict": "not_found",
+        "reasoning": "The cited reference 'Section 3(e)' (3(e)) was not found in the evidence corpus. Semantic similarity candidates cannot substitute for the missing cited reference."
+      },
+      "failure_diagnosis": null,
+      "reasoning": "The cited reference 'Section 3(e)' (3(e)) was not found in the evidence corpus. Semantic similarity candidates cannot substitute for the missing cited reference."
+    },
+    {
+      "case_id": "bench_legal_04_sec_3di_nested",
+      "domain": "legal",
+      "category": "reference_correctness",
+      "passed": true,
+      "expected_verdict": "not_found",
+      "actual_verdict": "not_found",
+      "expected_reference_status": "not_found",
+      "actual_reference_status": "not_found",
+      "expected_source_status": "available",
+      "actual_source_status": "available",
+      "expected_conclusive": true,
+      "actual_conclusive": true,
+      "confidence": 0.95,
+      "evidence_ids": [
+        "legal_sample_fixture_sec_3_d_chunk_003",
+        "legal_sample_fixture_sec_3_d_chunk_002",
+        "legal_sample_fixture_sec_3_d_chunk_001",
+        "legal_sample_fixture_sec_3_d",
+        "legal_sample_fixture_sec_001_legal_analysis_the_patents_act_1970"
+      ],
+      "eligible_evidence_ids": [
+        "legal_sample_fixture_sec_3_d_chunk_003",
+        "legal_sample_fixture_sec_3_d_chunk_002",
+        "legal_sample_fixture_sec_3_d_chunk_001"
+      ],
+      "evidence_trace": {
+        "claim": "Section 3(d)(i) provides specific enhanced efficacy guidelines for salts and esters.",
+        "reference": "Section 3(d)(i)",
+        "reference_resolution": {
+          "status": "not_applicable",
+          "matched_entry_ids": []
+        },
+        "retrieved_candidates": [
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d_chunk_003",
+            "match_type": "semantic",
+            "score": 0.555711030960083,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d_chunk_002",
+            "match_type": "semantic",
+            "score": 0.5036531686782837,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d_chunk_001",
+            "match_type": "semantic",
+            "score": 0.4082992672920227,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d",
+            "match_type": "semantic",
+            "score": 0.6709514260292053,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_001_legal_analysis_the_patents_act_1970",
+            "match_type": "semantic",
+            "score": 0.5193861126899719,
+            "document_id": "legal_sample_fixture"
+          }
+        ],
+        "eligible_candidates": [
+          "legal_sample_fixture_sec_3_d_chunk_003",
+          "legal_sample_fixture_sec_3_d_chunk_002",
+          "legal_sample_fixture_sec_3_d_chunk_001"
+        ],
+        "selected_evidence": [
+          "legal_sample_fixture_sec_3_d_chunk_003",
+          "legal_sample_fixture_sec_3_d_chunk_002",
+          "legal_sample_fixture_sec_3_d_chunk_001",
+          "legal_sample_fixture_sec_3_d",
+          "legal_sample_fixture_sec_001_legal_analysis_the_patents_act_1970"
+        ],
+        "source_attribution": {
+          "source_availability": "available",
+          "eligible_count": 3
+        },
+        "final_verdict": "not_found",
+        "reasoning": "The cited reference 'Section 3(d)(i)' (3(d)(i)) was not found in the evidence corpus. Semantic similarity candidates cannot substitute for the missing cited reference."
+      },
+      "failure_diagnosis": null,
+      "reasoning": "The cited reference 'Section 3(d)(i)' (3(d)(i)) was not found in the evidence corpus. Semantic similarity candidates cannot substitute for the missing cited reference."
+    },
+    {
+      "case_id": "bench_legal_05_heading_rejection",
+      "domain": "legal",
+      "category": "evidence_attribution",
+      "passed": true,
+      "expected_verdict": "unsupported",
+      "actual_verdict": "unsupported",
+      "expected_reference_status": "exact_match",
+      "actual_reference_status": "exact_match",
+      "expected_source_status": "available",
+      "actual_source_status": "available",
+      "expected_conclusive": true,
+      "actual_conclusive": true,
+      "confidence": 0.75,
+      "evidence_ids": [
+        "legal_sample_fixture_sec_3_d_chunk_001",
+        "legal_sample_fixture_sec_3_d_chunk_002",
+        "legal_sample_fixture_sec_3_d_chunk_003",
+        "legal_sample_fixture_sec_3_d",
+        "legal_sample_fixture_sec_001_legal_analysis_the_patents_act_1970"
+      ],
+      "eligible_evidence_ids": [
+        "legal_sample_fixture_sec_3_d_chunk_001",
+        "legal_sample_fixture_sec_3_d_chunk_002",
+        "legal_sample_fixture_sec_3_d_chunk_003"
+      ],
+      "evidence_trace": {
+        "claim": "Statutory provisions governing patentability are set forth in Section 3(d).",
+        "reference": "Section 3(d)",
+        "reference_resolution": {
+          "status": "not_applicable",
+          "matched_entry_ids": []
+        },
+        "retrieved_candidates": [
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d_chunk_001",
+            "match_type": "exact",
+            "score": 1.0,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d_chunk_002",
+            "match_type": "exact",
+            "score": 1.0,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d_chunk_003",
+            "match_type": "exact",
+            "score": 1.0,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d",
+            "match_type": "exact",
+            "score": 1.0,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_001_legal_analysis_the_patents_act_1970",
+            "match_type": "semantic",
+            "score": 0.6523565053939819,
+            "document_id": "legal_sample_fixture"
+          }
+        ],
+        "eligible_candidates": [
+          "legal_sample_fixture_sec_3_d_chunk_001",
+          "legal_sample_fixture_sec_3_d_chunk_002",
+          "legal_sample_fixture_sec_3_d_chunk_003"
+        ],
+        "selected_evidence": [
+          "legal_sample_fixture_sec_3_d_chunk_001",
+          "legal_sample_fixture_sec_3_d_chunk_002",
+          "legal_sample_fixture_sec_3_d_chunk_003",
+          "legal_sample_fixture_sec_3_d",
+          "legal_sample_fixture_sec_001_legal_analysis_the_patents_act_1970"
+        ],
+        "source_attribution": {
+          "source_availability": "available",
+          "eligible_count": 3
+        },
+        "final_verdict": "unsupported",
+        "reasoning": "The cited reference 'Section 3(d)' was found, but the retrieved provision does not contain the claimed substantive outcome (only 14% match)."
+      },
+      "failure_diagnosis": null,
+      "reasoning": "The cited reference 'Section 3(d)' was found, but the retrieved provision does not contain the claimed substantive outcome (only 14% match)."
+    },
+    {
+      "case_id": "bench_sci_01_grouped_3_4",
+      "domain": "scientific",
+      "category": "reference_correctness",
+      "passed": true,
+      "expected_verdict": "insufficient_evidence",
+      "actual_verdict": "insufficient_evidence",
+      "expected_reference_status": "exact_match",
+      "actual_reference_status": "exact_match",
+      "expected_source_status": "unavailable",
+      "actual_source_status": "unavailable",
+      "expected_conclusive": false,
+      "actual_conclusive": false,
+      "confidence": 0.85,
+      "evidence_ids": [
+        "scientific_sample_fixture_sec_003_2_methodology_table_003",
+        "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+        "scientific_sample_fixture_section_002",
+        "scientific_sample_fixture_section_003",
+        "scientific_sample_fixture_section_001"
+      ],
+      "eligible_evidence_ids": [],
+      "evidence_trace": {
+        "claim": "Prior benchmarks explored retrieval-augmented generation",
+        "reference": "[3, 4]",
+        "reference_resolution": {
+          "status": "resolved",
+          "matched_entry_ids": [
+            "sci_eval_01_ref_3",
+            "sci_eval_01_ref_4"
+          ]
+        },
+        "retrieved_candidates": [
+          {
+            "chunk_id": "scientific_sample_fixture_sec_003_2_methodology_table_003",
+            "match_type": "semantic",
+            "score": 0.9068393707275391,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+            "match_type": "semantic",
+            "score": 0.8906814455986023,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_002",
+            "match_type": "semantic",
+            "score": 0.8945685029029846,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_003",
+            "match_type": "semantic",
+            "score": 0.8882156610488892,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_001",
+            "match_type": "semantic",
+            "score": 0.8727675080299377,
+            "document_id": "scientific_sample_fixture"
+          }
+        ],
+        "eligible_candidates": [],
+        "selected_evidence": [
+          "scientific_sample_fixture_sec_003_2_methodology_table_003",
+          "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+          "scientific_sample_fixture_section_002",
+          "scientific_sample_fixture_section_003",
+          "scientific_sample_fixture_section_001"
+        ],
+        "source_attribution": {
+          "source_availability": "unavailable",
+          "eligible_count": 0
+        },
+        "final_verdict": "insufficient_evidence",
+        "reasoning": "Bibliographic reference '[3, 4]' was resolved to ', Shazeer, N', but the cited publication's substantive content is not available in the local corpus. Retrieved chunks from the citing document ('sci_eval_01') or unrelated documents cannot establish claim support."
+      },
+      "failure_diagnosis": null,
+      "reasoning": "Bibliographic reference '[3, 4]' was resolved to ', Shazeer, N', but the cited publication's substantive content is not available in the local corpus. Retrieved chunks from the citing document ('sci_eval_01') or unrelated documents cannot establish claim support."
+    },
+    {
+      "case_id": "bench_sci_02_range_5_7",
+      "domain": "scientific",
+      "category": "reference_correctness",
+      "passed": true,
+      "expected_verdict": "insufficient_evidence",
+      "actual_verdict": "insufficient_evidence",
+      "expected_reference_status": "exact_match",
+      "actual_reference_status": "exact_match",
+      "expected_source_status": "unavailable",
+      "actual_source_status": "unavailable",
+      "expected_conclusive": false,
+      "actual_conclusive": false,
+      "confidence": 0.85,
+      "evidence_ids": [
+        "scientific_sample_fixture_sec_003_2_methodology_table_003",
+        "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+        "scientific_sample_fixture_section_001",
+        "scientific_sample_fixture_section_002",
+        "scientific_sample_fixture_section_003"
+      ],
+      "eligible_evidence_ids": [],
+      "evidence_trace": {
+        "claim": "The proposed architecture reduces verification latency",
+        "reference": "[5–7]",
+        "reference_resolution": {
+          "status": "resolved",
+          "matched_entry_ids": [
+            "sci_eval_01_ref_5",
+            "sci_eval_01_ref_6",
+            "sci_eval_01_ref_7"
+          ]
+        },
+        "retrieved_candidates": [
+          {
+            "chunk_id": "scientific_sample_fixture_sec_003_2_methodology_table_003",
+            "match_type": "semantic",
+            "score": 0.8974977731704712,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+            "match_type": "semantic",
+            "score": 0.8458057641983032,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_001",
+            "match_type": "semantic",
+            "score": 0.9443828463554382,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_002",
+            "match_type": "semantic",
+            "score": 0.8946471810340881,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_003",
+            "match_type": "semantic",
+            "score": 0.8919504880905151,
+            "document_id": "scientific_sample_fixture"
+          }
+        ],
+        "eligible_candidates": [],
+        "selected_evidence": [
+          "scientific_sample_fixture_sec_003_2_methodology_table_003",
+          "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+          "scientific_sample_fixture_section_001",
+          "scientific_sample_fixture_section_002",
+          "scientific_sample_fixture_section_003"
+        ],
+        "source_attribution": {
+          "source_availability": "unavailable",
+          "eligible_count": 0
+        },
+        "final_verdict": "insufficient_evidence",
+        "reasoning": "Bibliographic reference '[5–7]' was resolved to ', Vlachos, A', but the cited publication's substantive content is not available in the local corpus. Retrieved chunks from the citing document ('sci_eval_01') or unrelated documents cannot establish claim support."
+      },
+      "failure_diagnosis": null,
+      "reasoning": "Bibliographic reference '[5–7]' was resolved to ', Vlachos, A', but the cited publication's substantive content is not available in the local corpus. Retrieved chunks from the citing document ('sci_eval_01') or unrelated documents cannot establish claim support."
+    },
+    {
+      "case_id": "bench_sci_03_author_year_supported",
+      "domain": "scientific",
+      "category": "reference_correctness",
+      "passed": true,
+      "expected_verdict": "supported",
+      "actual_verdict": "supported",
+      "expected_reference_status": "semantic_candidate",
+      "actual_reference_status": "semantic_candidate",
+      "expected_source_status": "available",
+      "actual_source_status": "available",
+      "expected_conclusive": true,
+      "actual_conclusive": true,
+      "confidence": 0.75,
+      "evidence_ids": [
+        "sci_doc_smith_2024_chunk_001",
+        "scientific_sample_fixture_sec_003_2_methodology_table_003",
+        "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+        "scientific_sample_fixture_section_002",
+        "scientific_sample_fixture_section_001"
+      ],
+      "eligible_evidence_ids": [
+        "sci_doc_smith_2024_chunk_001"
+      ],
+      "evidence_trace": {
+        "claim": "The proposed architecture improves precision",
+        "reference": "(Smith et al., 2024)",
+        "reference_resolution": {
+          "status": "resolved",
+          "matched_entry_ids": [
+            "sci_eval_01_ref_smith_2024"
+          ]
+        },
+        "retrieved_candidates": [
+          {
+            "chunk_id": "sci_doc_smith_2024_chunk_001",
+            "match_type": "exact",
+            "score": 1.0,
+            "document_id": "sci_doc_smith_2024"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_sec_003_2_methodology_table_003",
+            "match_type": "semantic",
+            "score": 0.9174584746360779,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+            "match_type": "semantic",
+            "score": 0.8515478372573853,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_002",
+            "match_type": "semantic",
+            "score": 0.9152854084968567,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_001",
+            "match_type": "semantic",
+            "score": 0.903326690196991,
+            "document_id": "scientific_sample_fixture"
+          }
+        ],
+        "eligible_candidates": [
+          "sci_doc_smith_2024_chunk_001"
+        ],
+        "selected_evidence": [
+          "sci_doc_smith_2024_chunk_001",
+          "scientific_sample_fixture_sec_003_2_methodology_table_003",
+          "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+          "scientific_sample_fixture_section_002",
+          "scientific_sample_fixture_section_001"
+        ],
+        "source_attribution": {
+          "source_availability": "available",
+          "eligible_count": 1
+        },
+        "final_verdict": "supported",
+        "reasoning": "The cited reference '(Smith et al., 2024)' was found. The retrieved provision corroborates the substantive requirement described in the claim (100% substantive term match)."
+      },
+      "failure_diagnosis": null,
+      "reasoning": "The cited reference '(Smith et al., 2024)' was found. The retrieved provision corroborates the substantive requirement described in the claim (100% substantive term match)."
+    },
+    {
+      "case_id": "bench_sci_04_source_unavail_12",
+      "domain": "scientific",
+      "category": "source_availability",
+      "passed": true,
+      "expected_verdict": "insufficient_evidence",
+      "actual_verdict": "insufficient_evidence",
+      "expected_reference_status": "exact_match",
+      "actual_reference_status": "exact_match",
+      "expected_source_status": "unavailable",
+      "actual_source_status": "unavailable",
+      "expected_conclusive": false,
+      "actual_conclusive": false,
+      "confidence": 0.85,
+      "evidence_ids": [
+        "scientific_sample_fixture_sec_002_1_introduction_chunk_001",
+        "scientific_sample_fixture_sec_003_2_methodology_table_003",
+        "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+        "scientific_sample_fixture_section_002",
+        "scientific_sample_fixture_section_003"
+      ],
+      "eligible_evidence_ids": [],
+      "evidence_trace": {
+        "claim": "Recent studies demonstrate that hallucinated citations compromise scientific integrity",
+        "reference": "[12]",
+        "reference_resolution": {
+          "status": "resolved",
+          "matched_entry_ids": [
+            "sci_eval_01_ref_12"
+          ]
+        },
+        "retrieved_candidates": [
+          {
+            "chunk_id": "scientific_sample_fixture_sec_002_1_introduction_chunk_001",
+            "match_type": "semantic",
+            "score": 0.9290087223052979,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_sec_003_2_methodology_table_003",
+            "match_type": "semantic",
+            "score": 0.8681650161743164,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+            "match_type": "semantic",
+            "score": 0.8570320010185242,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_002",
+            "match_type": "semantic",
+            "score": 0.8838915824890137,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_003",
+            "match_type": "semantic",
+            "score": 0.8810219764709473,
+            "document_id": "scientific_sample_fixture"
+          }
+        ],
+        "eligible_candidates": [],
+        "selected_evidence": [
+          "scientific_sample_fixture_sec_002_1_introduction_chunk_001",
+          "scientific_sample_fixture_sec_003_2_methodology_table_003",
+          "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+          "scientific_sample_fixture_section_002",
+          "scientific_sample_fixture_section_003"
+        ],
+        "source_attribution": {
+          "source_availability": "unavailable",
+          "eligible_count": 0
+        },
+        "final_verdict": "insufficient_evidence",
+        "reasoning": "Bibliographic reference '[12]' was resolved to '[12]', but the cited publication's substantive content is not available in the local corpus. Retrieved chunks from the citing document ('sci_eval_01') or unrelated documents cannot establish claim support."
+      },
+      "failure_diagnosis": null,
+      "reasoning": "Bibliographic reference '[12]' was resolved to '[12]', but the cited publication's substantive content is not available in the local corpus. Retrieved chunks from the citing document ('sci_eval_01') or unrelated documents cannot establish claim support."
+    },
+    {
+      "case_id": "bench_sci_05_unrelated_source_isolation",
+      "domain": "scientific",
+      "category": "source_availability",
+      "passed": true,
+      "expected_verdict": "insufficient_evidence",
+      "actual_verdict": "insufficient_evidence",
+      "expected_reference_status": "exact_match",
+      "actual_reference_status": "exact_match",
+      "expected_source_status": "unavailable",
+      "actual_source_status": "unavailable",
+      "expected_conclusive": false,
+      "actual_conclusive": false,
+      "confidence": 0.85,
+      "evidence_ids": [
+        "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+        "scientific_sample_fixture_sec_003_2_methodology_table_003",
+        "scientific_sample_fixture_section_002",
+        "scientific_sample_fixture_section_003",
+        "scientific_sample_fixture_section_001"
+      ],
+      "eligible_evidence_ids": [],
+      "evidence_trace": {
+        "claim": "Language models scale few-shot performance across NLP benchmarks",
+        "reference": "[12]",
+        "reference_resolution": {
+          "status": "resolved",
+          "matched_entry_ids": [
+            "sci_eval_01_ref_12"
+          ]
+        },
+        "retrieved_candidates": [
+          {
+            "chunk_id": "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+            "match_type": "semantic",
+            "score": 0.8919209837913513,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_sec_003_2_methodology_table_003",
+            "match_type": "semantic",
+            "score": 0.8910088539123535,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_002",
+            "match_type": "semantic",
+            "score": 0.8637890815734863,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_003",
+            "match_type": "semantic",
+            "score": 0.8551586866378784,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_001",
+            "match_type": "semantic",
+            "score": 0.8206804394721985,
+            "document_id": "scientific_sample_fixture"
+          }
+        ],
+        "eligible_candidates": [],
+        "selected_evidence": [
+          "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+          "scientific_sample_fixture_sec_003_2_methodology_table_003",
+          "scientific_sample_fixture_section_002",
+          "scientific_sample_fixture_section_003",
+          "scientific_sample_fixture_section_001"
+        ],
+        "source_attribution": {
+          "source_availability": "unavailable",
+          "eligible_count": 0
+        },
+        "final_verdict": "insufficient_evidence",
+        "reasoning": "Bibliographic reference '[12]' was resolved to '[12]', but the cited publication's substantive content is not available in the local corpus. Retrieved chunks from the citing document ('sci_eval_01') or unrelated documents cannot establish claim support."
+      },
+      "failure_diagnosis": null,
+      "reasoning": "Bibliographic reference '[12]' was resolved to '[12]', but the cited publication's substantive content is not available in the local corpus. Retrieved chunks from the citing document ('sci_eval_01') or unrelated documents cannot establish claim support."
+    },
+    {
+      "case_id": "bench_sci_06_citing_doc_isolation",
+      "domain": "scientific",
+      "category": "evidence_attribution",
+      "passed": true,
+      "expected_verdict": "insufficient_evidence",
+      "actual_verdict": "insufficient_evidence",
+      "expected_reference_status": "exact_match",
+      "actual_reference_status": "exact_match",
+      "expected_source_status": "unavailable",
+      "actual_source_status": "unavailable",
+      "expected_conclusive": false,
+      "actual_conclusive": false,
+      "confidence": 0.85,
+      "evidence_ids": [
+        "scientific_sample_fixture_sec_002_1_introduction_chunk_001",
+        "scientific_sample_fixture_sec_003_2_methodology_table_003",
+        "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+        "scientific_sample_fixture_section_002",
+        "scientific_sample_fixture_section_003"
+      ],
+      "eligible_evidence_ids": [],
+      "evidence_trace": {
+        "claim": "Recent studies demonstrate that hallucinated citations compromise scientific integrity",
+        "reference": "[12]",
+        "reference_resolution": {
+          "status": "resolved",
+          "matched_entry_ids": [
+            "sci_eval_01_ref_12"
+          ]
+        },
+        "retrieved_candidates": [
+          {
+            "chunk_id": "scientific_sample_fixture_sec_002_1_introduction_chunk_001",
+            "match_type": "semantic",
+            "score": 0.9290087223052979,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_sec_003_2_methodology_table_003",
+            "match_type": "semantic",
+            "score": 0.8681650161743164,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+            "match_type": "semantic",
+            "score": 0.8570320010185242,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_002",
+            "match_type": "semantic",
+            "score": 0.8838915824890137,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_003",
+            "match_type": "semantic",
+            "score": 0.8810219764709473,
+            "document_id": "scientific_sample_fixture"
+          }
+        ],
+        "eligible_candidates": [],
+        "selected_evidence": [
+          "scientific_sample_fixture_sec_002_1_introduction_chunk_001",
+          "scientific_sample_fixture_sec_003_2_methodology_table_003",
+          "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+          "scientific_sample_fixture_section_002",
+          "scientific_sample_fixture_section_003"
+        ],
+        "source_attribution": {
+          "source_availability": "unavailable",
+          "eligible_count": 0
+        },
+        "final_verdict": "insufficient_evidence",
+        "reasoning": "Bibliographic reference '[12]' was resolved to '[12]', but the cited publication's substantive content is not available in the local corpus. Retrieved chunks from the citing document ('sci_eval_01') or unrelated documents cannot establish claim support."
+      },
+      "failure_diagnosis": null,
+      "reasoning": "Bibliographic reference '[12]' was resolved to '[12]', but the cited publication's substantive content is not available in the local corpus. Retrieved chunks from the citing document ('sci_eval_01') or unrelated documents cannot establish claim support."
+    },
+    {
+      "case_id": "bench_sci_07_contradiction",
+      "domain": "scientific",
+      "category": "evidence_support",
+      "passed": true,
+      "expected_verdict": "unsupported",
+      "actual_verdict": "unsupported",
+      "expected_reference_status": "semantic_candidate",
+      "actual_reference_status": "semantic_candidate",
+      "expected_source_status": "available",
+      "actual_source_status": "available",
+      "expected_conclusive": true,
+      "actual_conclusive": true,
+      "confidence": 0.93,
+      "evidence_ids": [
+        "sci_doc_smith_2024_chunk_001",
+        "scientific_sample_fixture_sec_003_2_methodology_table_003",
+        "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+        "scientific_sample_fixture_section_001",
+        "scientific_sample_fixture_section_002"
+      ],
+      "eligible_evidence_ids": [
+        "sci_doc_smith_2024_chunk_001"
+      ],
+      "evidence_trace": {
+        "claim": "The proposed architecture degrades precision and increases verification latency",
+        "reference": "(Smith et al., 2024)",
+        "reference_resolution": {
+          "status": "resolved",
+          "matched_entry_ids": [
+            "sci_eval_01_ref_smith_2024"
+          ]
+        },
+        "retrieved_candidates": [
+          {
+            "chunk_id": "sci_doc_smith_2024_chunk_001",
+            "match_type": "exact",
+            "score": 1.0,
+            "document_id": "sci_doc_smith_2024"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_sec_003_2_methodology_table_003",
+            "match_type": "semantic",
+            "score": 0.892516553401947,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+            "match_type": "semantic",
+            "score": 0.8265525698661804,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_001",
+            "match_type": "semantic",
+            "score": 0.9260185956954956,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_002",
+            "match_type": "semantic",
+            "score": 0.8854417204856873,
+            "document_id": "scientific_sample_fixture"
+          }
+        ],
+        "eligible_candidates": [
+          "sci_doc_smith_2024_chunk_001"
+        ],
+        "selected_evidence": [
+          "sci_doc_smith_2024_chunk_001",
+          "scientific_sample_fixture_sec_003_2_methodology_table_003",
+          "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+          "scientific_sample_fixture_section_001",
+          "scientific_sample_fixture_section_002"
+        ],
+        "source_attribution": {
+          "source_availability": "available",
+          "eligible_count": 1
+        },
+        "final_verdict": "unsupported",
+        "reasoning": "The evidence directly contradicts the claim: empirical evaluation demonstrates reduced latency and improved precision."
+      },
+      "failure_diagnosis": null,
+      "reasoning": "The evidence directly contradicts the claim: empirical evaluation demonstrates reduced latency and improved precision."
+    },
+    {
+      "case_id": "bench_sci_08_partial_support",
+      "domain": "scientific",
+      "category": "evidence_support",
+      "passed": true,
+      "expected_verdict": "partially_correct",
+      "actual_verdict": "partially_correct",
+      "expected_reference_status": "semantic_candidate",
+      "actual_reference_status": "semantic_candidate",
+      "expected_source_status": "available",
+      "actual_source_status": "available",
+      "expected_conclusive": true,
+      "actual_conclusive": true,
+      "confidence": 0.88,
+      "evidence_ids": [
+        "sci_doc_smith_2024_chunk_001",
+        "scientific_sample_fixture_sec_003_2_methodology_table_003",
+        "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+        "scientific_sample_fixture_section_001",
+        "scientific_sample_fixture_section_002"
+      ],
+      "eligible_evidence_ids": [
+        "sci_doc_smith_2024_chunk_001"
+      ],
+      "evidence_trace": {
+        "claim": "The proposed architecture reduces verification latency and achieves zero memory overhead",
+        "reference": "(Smith et al., 2024)",
+        "reference_resolution": {
+          "status": "resolved",
+          "matched_entry_ids": [
+            "sci_eval_01_ref_smith_2024"
+          ]
+        },
+        "retrieved_candidates": [
+          {
+            "chunk_id": "sci_doc_smith_2024_chunk_001",
+            "match_type": "exact",
+            "score": 1.0,
+            "document_id": "sci_doc_smith_2024"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_sec_003_2_methodology_table_003",
+            "match_type": "semantic",
+            "score": 0.8876467943191528,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+            "match_type": "semantic",
+            "score": 0.8370461463928223,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_001",
+            "match_type": "semantic",
+            "score": 0.9338196516036987,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_002",
+            "match_type": "semantic",
+            "score": 0.8836106061935425,
+            "document_id": "scientific_sample_fixture"
+          }
+        ],
+        "eligible_candidates": [
+          "sci_doc_smith_2024_chunk_001"
+        ],
+        "selected_evidence": [
+          "sci_doc_smith_2024_chunk_001",
+          "scientific_sample_fixture_sec_003_2_methodology_table_003",
+          "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+          "scientific_sample_fixture_section_001",
+          "scientific_sample_fixture_section_002"
+        ],
+        "source_attribution": {
+          "source_availability": "available",
+          "eligible_count": 1
+        },
+        "final_verdict": "partially_correct",
+        "reasoning": "The evidence corroborates latency reduction, but contains no findings regarding zero memory overhead."
+      },
+      "failure_diagnosis": null,
+      "reasoning": "The evidence corroborates latency reduction, but contains no findings regarding zero memory overhead."
+    },
+    {
+      "case_id": "bench_sci_09_insufficient_evidence",
+      "domain": "scientific",
+      "category": "evidence_support",
+      "passed": true,
+      "expected_verdict": "insufficient_evidence",
+      "actual_verdict": "insufficient_evidence",
+      "expected_reference_status": "semantic_candidate",
+      "actual_reference_status": "semantic_candidate",
+      "expected_source_status": "available",
+      "actual_source_status": "available",
+      "expected_conclusive": false,
+      "actual_conclusive": false,
+      "confidence": 0.7,
+      "evidence_ids": [
+        "sci_doc_smith_2024_chunk_001",
+        "scientific_sample_fixture_sec_003_2_methodology_table_003",
+        "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+        "scientific_sample_fixture_section_002",
+        "scientific_sample_fixture_section_003"
+      ],
+      "eligible_evidence_ids": [
+        "sci_doc_smith_2024_chunk_001"
+      ],
+      "evidence_trace": {
+        "claim": "The model architecture was trained on multimodal biomedical imagery datasets",
+        "reference": "(Smith et al., 2024)",
+        "reference_resolution": {
+          "status": "resolved",
+          "matched_entry_ids": [
+            "sci_eval_01_ref_smith_2024"
+          ]
+        },
+        "retrieved_candidates": [
+          {
+            "chunk_id": "sci_doc_smith_2024_chunk_001",
+            "match_type": "exact",
+            "score": 1.0,
+            "document_id": "sci_doc_smith_2024"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_sec_003_2_methodology_table_003",
+            "match_type": "semantic",
+            "score": 0.9078773260116577,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+            "match_type": "semantic",
+            "score": 0.8502868413925171,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_002",
+            "match_type": "semantic",
+            "score": 0.8959691524505615,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_003",
+            "match_type": "semantic",
+            "score": 0.8871177434921265,
+            "document_id": "scientific_sample_fixture"
+          }
+        ],
+        "eligible_candidates": [
+          "sci_doc_smith_2024_chunk_001"
+        ],
+        "selected_evidence": [
+          "sci_doc_smith_2024_chunk_001",
+          "scientific_sample_fixture_sec_003_2_methodology_table_003",
+          "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+          "scientific_sample_fixture_section_002",
+          "scientific_sample_fixture_section_003"
+        ],
+        "source_attribution": {
+          "source_availability": "available",
+          "eligible_count": 1
+        },
+        "final_verdict": "insufficient_evidence",
+        "reasoning": "The evidence discusses automated citation verification and contains no findings regarding multimodal biomedical imagery datasets."
+      },
+      "failure_diagnosis": null,
+      "reasoning": "The evidence discusses automated citation verification and contains no findings regarding multimodal biomedical imagery datasets."
+    },
+    {
+      "case_id": "bench_sci_10_missing_reference_guard",
+      "domain": "scientific",
+      "category": "reference_correctness",
+      "passed": true,
+      "expected_verdict": "not_found",
+      "actual_verdict": "not_found",
+      "expected_reference_status": "not_found",
+      "actual_reference_status": "not_found",
+      "expected_source_status": "unresolved_reference",
+      "actual_source_status": "unresolved_reference",
+      "expected_conclusive": true,
+      "actual_conclusive": true,
+      "confidence": 0.95,
+      "evidence_ids": [
+        "scientific_sample_fixture_sec_003_2_methodology_table_003",
+        "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+        "scientific_sample_fixture_section_002",
+        "scientific_sample_fixture_section_003",
+        "scientific_sample_fixture_section_001"
+      ],
+      "eligible_evidence_ids": [],
+      "evidence_trace": {
+        "claim": "Unsupervised pretraining produces optimal semantic representations across domains",
+        "reference": "[999]",
+        "reference_resolution": {
+          "status": "not_found",
+          "matched_entry_ids": []
+        },
+        "retrieved_candidates": [
+          {
+            "chunk_id": "scientific_sample_fixture_sec_003_2_methodology_table_003",
+            "match_type": "semantic",
+            "score": 0.9031931757926941,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+            "match_type": "semantic",
+            "score": 0.8808379173278809,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_002",
+            "match_type": "semantic",
+            "score": 0.8864538669586182,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_003",
+            "match_type": "semantic",
+            "score": 0.8770173788070679,
+            "document_id": "scientific_sample_fixture"
+          },
+          {
+            "chunk_id": "scientific_sample_fixture_section_001",
+            "match_type": "semantic",
+            "score": 0.8343497514724731,
+            "document_id": "scientific_sample_fixture"
+          }
+        ],
+        "eligible_candidates": [],
+        "selected_evidence": [
+          "scientific_sample_fixture_sec_003_2_methodology_table_003",
+          "scientific_sample_fixture_sec_003_2_methodology_chunk_002",
+          "scientific_sample_fixture_section_002",
+          "scientific_sample_fixture_section_003",
+          "scientific_sample_fixture_section_001"
+        ],
+        "source_attribution": {
+          "source_availability": "unresolved_reference",
+          "eligible_count": 0
+        },
+        "final_verdict": "not_found",
+        "reasoning": "The cited reference '[999]' (999) was not found in the evidence corpus. Semantic similarity candidates cannot substitute for the missing cited reference."
+      },
+      "failure_diagnosis": null,
+      "reasoning": "The cited reference '[999]' (999) was not found in the evidence corpus. Semantic similarity candidates cannot substitute for the missing cited reference."
+    },
+    {
+      "case_id": "bench_legal_07_substantive_support",
+      "domain": "legal",
+      "category": "evidence_support",
+      "passed": true,
+      "expected_verdict": "supported",
+      "actual_verdict": "supported",
+      "expected_reference_status": "exact_match",
+      "actual_reference_status": "exact_match",
+      "expected_source_status": "available",
+      "actual_source_status": "available",
+      "expected_conclusive": true,
+      "actual_conclusive": true,
+      "confidence": 0.9,
+      "evidence_ids": [
+        "legal_sample_fixture_sec_3_d_chunk_001",
+        "legal_sample_fixture_sec_3_d_chunk_002",
+        "legal_sample_fixture_sec_3_d_chunk_003",
+        "legal_sample_fixture_sec_3_d",
+        "legal_sample_fixture_sec_001_legal_analysis_the_patents_act_1970"
+      ],
+      "eligible_evidence_ids": [
+        "legal_sample_fixture_sec_3_d_chunk_001",
+        "legal_sample_fixture_sec_3_d_chunk_002",
+        "legal_sample_fixture_sec_3_d_chunk_003"
+      ],
+      "evidence_trace": {
+        "claim": "The mere discovery of a new form of a known substance is not patentable.",
+        "reference": "Section 3(d)",
+        "reference_resolution": {
+          "status": "not_applicable",
+          "matched_entry_ids": []
+        },
+        "retrieved_candidates": [
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d_chunk_001",
+            "match_type": "exact",
+            "score": 1.0,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d_chunk_002",
+            "match_type": "exact",
+            "score": 1.0,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d_chunk_003",
+            "match_type": "exact",
+            "score": 1.0,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_3_d",
+            "match_type": "exact",
+            "score": 1.0,
+            "document_id": "legal_sample_fixture"
+          },
+          {
+            "chunk_id": "legal_sample_fixture_sec_001_legal_analysis_the_patents_act_1970",
+            "match_type": "semantic",
+            "score": 0.5854544639587402,
+            "document_id": "legal_sample_fixture"
+          }
+        ],
+        "eligible_candidates": [
+          "legal_sample_fixture_sec_3_d_chunk_001",
+          "legal_sample_fixture_sec_3_d_chunk_002",
+          "legal_sample_fixture_sec_3_d_chunk_003"
+        ],
+        "selected_evidence": [
+          "legal_sample_fixture_sec_3_d_chunk_001",
+          "legal_sample_fixture_sec_3_d_chunk_002",
+          "legal_sample_fixture_sec_3_d_chunk_003",
+          "legal_sample_fixture_sec_3_d",
+          "legal_sample_fixture_sec_001_legal_analysis_the_patents_act_1970"
+        ],
+        "source_attribution": {
+          "source_availability": "available",
+          "eligible_count": 3
+        },
+        "final_verdict": "supported",
+        "reasoning": "The cited reference 'Section 3(d)' was found exactly. The retrieved provision verbatim corroborates the substantive statement made in the claim."
+      },
+      "failure_diagnosis": null,
+      "reasoning": "The cited reference 'Section 3(d)' was found exactly. The retrieved provision verbatim corroborates the substantive statement made in the claim."
+    }
+  ]
+}

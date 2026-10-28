@@ -1,0 +1,333 @@
+{
+  "document_id": "legal_sample_fixture",
+  "domain": "legal",
+  "source_path": "C:\\Users\\DHARANIDHARAN\\Desktop\\Project\\Capstone\\tests\\sample_fixture.pdf",
+  "title": "Legal Analysis: The Patents Act 1970",
+  "pages": 2,
+  "elements": [
+    {
+      "element_id": "legal_sample_fixture_elem_0001",
+      "element_type": "heading",
+      "text": "Legal Analysis: The Patents Act 1970",
+      "page": 1,
+      "level": 1,
+      "parent_element_id": null,
+      "metadata": {
+        "raw_label": "section_header"
+      }
+    },
+    {
+      "element_id": "legal_sample_fixture_elem_0002",
+      "element_type": "heading",
+      "text": "1. Section 3(d) Provisions",
+      "page": 1,
+      "level": 1,
+      "parent_element_id": null,
+      "metadata": {
+        "raw_label": "section_header"
+      }
+    },
+    {
+      "element_id": "legal_sample_fixture_elem_0003",
+      "element_type": "paragraph",
+      "text": "The mere discovery of a new form of a known substance is not patentable.",
+      "page": 1,
+      "level": null,
+      "parent_element_id": "legal_sample_fixture_elem_0002",
+      "metadata": {
+        "raw_label": "text",
+        "enclosing_section": "1. Section 3(d) Provisions"
+      }
+    },
+    {
+      "element_id": "legal_sample_fixture_elem_0004",
+      "element_type": "paragraph",
+      "text": "This section prevents evergreening of pharmaceutical patents.",
+      "page": 1,
+      "level": null,
+      "parent_element_id": "legal_sample_fixture_elem_0002",
+      "metadata": {
+        "raw_label": "text",
+        "enclosing_section": "1. Section 3(d) Provisions"
+      }
+    },
+    {
+      "element_id": "legal_sample_fixture_elem_0005",
+      "element_type": "list_item",
+      "text": "Judicial Precedents",
+      "page": 2,
+      "level": null,
+      "parent_element_id": "legal_sample_fixture_elem_0002",
+      "metadata": {
+        "raw_label": "list_item",
+        "enclosing_section": "1. Section 3(d) Provisions"
+      }
+    },
+    {
+      "element_id": "legal_sample_fixture_elem_0006",
+      "element_type": "paragraph",
+      "text": "In Novartis AG v. Union of India, the Supreme Court upheld Section 3(d).",
+      "page": 2,
+      "level": null,
+      "parent_element_id": "legal_sample_fixture_elem_0002",
+      "metadata": {
+        "raw_label": "text",
+        "enclosing_section": "1. Section 3(d) Provisions"
+      }
+    }
+  ],
+  "tables": [],
+  "raw_structure": {
+    "schema_name": "DoclingDocument",
+    "version": "1.10.0",
+    "name": "sample_fixture",
+    "origin": {
+      "mimetype": "application/pdf",
+      "binary_hash": 17548383367217493215,
+      "filename": "sample_fixture.pdf"
+    },
+    "furniture": {
+      "self_ref": "#/furniture",
+      "children": [],
+      "content_layer": "furniture",
+      "name": "_root_",
+      "label": "unspecified"
+    },
+    "body": {
+      "self_ref": "#/body",
+      "children": [
+        {
+          "$ref": "#/texts/0"
+        },
+        {
+          "$ref": "#/texts/1"
+        },
+        {
+          "$ref": "#/texts/2"
+        },
+        {
+          "$ref": "#/texts/3"
+        },
+        {
+          "$ref": "#/groups/0"
+        },
+        {
+          "$ref": "#/texts/5"
+        }
+      ],
+      "content_layer": "body",
+      "name": "_root_",
+      "label": "unspecified"
+    },
+    "groups": [
+      {
+        "self_ref": "#/groups/0",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [
+          {
+            "$ref": "#/texts/4"
+          }
+        ],
+        "content_layer": "body",
+        "name": "list",
+        "label": "list"
+      }
+    ],
+    "texts": [
+      {
+        "self_ref": "#/texts/0",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "section_header",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 72.0,
+              "t": 761.488,
+              "r": 354.7680000000001,
+              "b": 746.688,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              36
+            ]
+          }
+        ],
+        "orig": "Legal Analysis: The Patents Act 1970",
+        "text": "Legal Analysis: The Patents Act 1970",
+        "level": 1
+      },
+      {
+        "self_ref": "#/texts/1",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "section_header",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 72.0,
+              "t": 728.616,
+              "r": 218.71200000000002,
+              "b": 717.516,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              26
+            ]
+          }
+        ],
+        "orig": "1. Section 3(d) Provisions",
+        "text": "1. Section 3(d) Provisions",
+        "level": 1
+      },
+      {
+        "self_ref": "#/texts/2",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 72.0,
+              "t": 702.18,
+              "r": 401.59999999999997,
+              "b": 692.93,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              72
+            ]
+          }
+        ],
+        "orig": "The mere discovery of a new form of a known substance is not patentable.",
+        "text": "The mere discovery of a new form of a known substance is not patentable."
+      },
+      {
+        "self_ref": "#/texts/3",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 72.0,
+              "t": 682.18,
+              "r": 347.67999999999995,
+              "b": 672.93,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              61
+            ]
+          }
+        ],
+        "orig": "This section prevents evergreening of pharmaceutical patents.",
+        "text": "This section prevents evergreening of pharmaceutical patents."
+      },
+      {
+        "self_ref": "#/texts/4",
+        "parent": {
+          "$ref": "#/groups/0"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 72.0,
+              "t": 760.052,
+              "r": 219.06999999999996,
+              "b": 747.102,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              22
+            ]
+          }
+        ],
+        "orig": "2. Judicial Precedents",
+        "text": "Judicial Precedents",
+        "enumerated": true,
+        "marker": "2."
+      },
+      {
+        "self_ref": "#/texts/5",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 72.0,
+              "t": 727.18,
+              "r": 394.3699999999999,
+              "b": 717.93,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              72
+            ]
+          }
+        ],
+        "orig": "In Novartis AG v. Union of India, the Supreme Court upheld Section 3(d).",
+        "text": "In Novartis AG v. Union of India, the Supreme Court upheld Section 3(d)."
+      }
+    ],
+    "pictures": [],
+    "tables": [],
+    "key_value_items": [],
+    "form_items": [],
+    "pages": {
+      "1": {
+        "size": {
+          "width": 612.0,
+          "height": 792.0
+        },
+        "page_no": 1
+      },
+      "2": {
+        "size": {
+          "width": 612.0,
+          "height": 792.0
+        },
+        "page_no": 2
+      }
+    }
+  },
+  "metadata": {
+    "filename": "sample_fixture.pdf",
+    "file_extension": ".pdf",
+    "element_count": 6,
+    "table_count": 0
+  }
+}

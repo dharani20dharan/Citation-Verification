@@ -1,0 +1,362 @@
+{
+  "document_id": "scientific_sample_fixture",
+  "domain": "scientific",
+  "source_path": "C:\\Users\\DHARANIDHARAN\\Desktop\\Project\\Capstone\\tests\\sample_fixture.docx",
+  "title": "Scientific Paper on Verification",
+  "pages": 1,
+  "elements": [
+    {
+      "element_id": "scientific_sample_fixture_elem_0001",
+      "element_type": "title",
+      "text": "Scientific Paper on Verification",
+      "page": null,
+      "level": 1,
+      "parent_element_id": null,
+      "metadata": {
+        "raw_label": "title"
+      }
+    },
+    {
+      "element_id": "scientific_sample_fixture_elem_0002",
+      "element_type": "heading",
+      "text": "1. Introduction",
+      "page": null,
+      "level": 2,
+      "parent_element_id": "scientific_sample_fixture_elem_0001",
+      "metadata": {
+        "raw_label": "section_header"
+      }
+    },
+    {
+      "element_id": "scientific_sample_fixture_elem_0003",
+      "element_type": "paragraph",
+      "text": "This paper investigates citation verification in scientific literature.",
+      "page": null,
+      "level": null,
+      "parent_element_id": "scientific_sample_fixture_elem_0002",
+      "metadata": {
+        "raw_label": "text",
+        "enclosing_section": "1. Introduction"
+      }
+    },
+    {
+      "element_id": "scientific_sample_fixture_elem_0004",
+      "element_type": "heading",
+      "text": "2. Methodology",
+      "page": null,
+      "level": 2,
+      "parent_element_id": "scientific_sample_fixture_elem_0001",
+      "metadata": {
+        "raw_label": "section_header"
+      }
+    },
+    {
+      "element_id": "scientific_sample_fixture_elem_0005",
+      "element_type": "paragraph",
+      "text": "We describe our corpus extraction approach.",
+      "page": null,
+      "level": null,
+      "parent_element_id": "scientific_sample_fixture_elem_0004",
+      "metadata": {
+        "raw_label": "text",
+        "enclosing_section": "2. Methodology"
+      }
+    },
+    {
+      "element_id": "scientific_sample_fixture_elem_0006",
+      "element_type": "table",
+      "text": "| Metric   |   Score |\n|----------|---------|\n| Accuracy |    0.95 |",
+      "page": null,
+      "level": null,
+      "parent_element_id": "scientific_sample_fixture_elem_0004",
+      "metadata": {
+        "table_id": "scientific_sample_fixture_table_001",
+        "num_rows": 2,
+        "num_cols": 2,
+        "caption": "",
+        "enclosing_section": "2. Methodology"
+      }
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "scientific_sample_fixture_table_001",
+      "page": null,
+      "markdown": "| Metric   |   Score |\n|----------|---------|\n| Accuracy |    0.95 |",
+      "num_rows": 2,
+      "num_cols": 2,
+      "caption": "",
+      "metadata": {
+        "enclosing_section": "2. Methodology"
+      }
+    }
+  ],
+  "raw_structure": {
+    "schema_name": "DoclingDocument",
+    "version": "1.10.0",
+    "name": "sample_fixture",
+    "origin": {
+      "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "binary_hash": 16970154928863346261,
+      "filename": "sample_fixture.docx"
+    },
+    "furniture": {
+      "self_ref": "#/furniture",
+      "children": [],
+      "content_layer": "furniture",
+      "name": "_root_",
+      "label": "unspecified"
+    },
+    "body": {
+      "self_ref": "#/body",
+      "children": [
+        {
+          "$ref": "#/texts/0"
+        }
+      ],
+      "content_layer": "body",
+      "name": "_root_",
+      "label": "unspecified"
+    },
+    "groups": [],
+    "texts": [
+      {
+        "self_ref": "#/texts/0",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [
+          {
+            "$ref": "#/texts/1"
+          },
+          {
+            "$ref": "#/texts/3"
+          }
+        ],
+        "content_layer": "body",
+        "label": "title",
+        "prov": [],
+        "orig": "Scientific Paper on Verification",
+        "text": "Scientific Paper on Verification"
+      },
+      {
+        "self_ref": "#/texts/1",
+        "parent": {
+          "$ref": "#/texts/0"
+        },
+        "children": [
+          {
+            "$ref": "#/texts/2"
+          }
+        ],
+        "content_layer": "body",
+        "label": "section_header",
+        "prov": [],
+        "orig": "1. Introduction",
+        "text": "1. Introduction",
+        "level": 1
+      },
+      {
+        "self_ref": "#/texts/2",
+        "parent": {
+          "$ref": "#/texts/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [],
+        "orig": "This paper investigates citation verification in scientific literature.",
+        "text": "This paper investigates citation verification in scientific literature.",
+        "formatting": {
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "strikethrough": false,
+          "script": "baseline"
+        }
+      },
+      {
+        "self_ref": "#/texts/3",
+        "parent": {
+          "$ref": "#/texts/0"
+        },
+        "children": [
+          {
+            "$ref": "#/texts/4"
+          },
+          {
+            "$ref": "#/tables/0"
+          }
+        ],
+        "content_layer": "body",
+        "label": "section_header",
+        "prov": [],
+        "orig": "2. Methodology",
+        "text": "2. Methodology",
+        "level": 1
+      },
+      {
+        "self_ref": "#/texts/4",
+        "parent": {
+          "$ref": "#/texts/3"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [],
+        "orig": "We describe our corpus extraction approach.",
+        "text": "We describe our corpus extraction approach.",
+        "formatting": {
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "strikethrough": false,
+          "script": "baseline"
+        }
+      }
+    ],
+    "pictures": [],
+    "tables": [
+      {
+        "self_ref": "#/tables/0",
+        "parent": {
+          "$ref": "#/texts/3"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "table",
+        "prov": [],
+        "captions": [],
+        "references": [],
+        "footnotes": [],
+        "data": {
+          "table_cells": [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Metric",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Score",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Accuracy",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "0.95",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          "num_rows": 2,
+          "num_cols": 2,
+          "orientation": "rot_0",
+          "grid": [
+            [
+              {
+                "row_span": 1,
+                "col_span": 1,
+                "start_row_offset_idx": 0,
+                "end_row_offset_idx": 1,
+                "start_col_offset_idx": 0,
+                "end_col_offset_idx": 1,
+                "text": "Metric",
+                "column_header": true,
+                "row_header": false,
+                "row_section": false,
+                "fillable": false
+              },
+              {
+                "row_span": 1,
+                "col_span": 1,
+                "start_row_offset_idx": 0,
+                "end_row_offset_idx": 1,
+                "start_col_offset_idx": 1,
+                "end_col_offset_idx": 2,
+                "text": "Score",
+                "column_header": true,
+                "row_header": false,
+                "row_section": false,
+                "fillable": false
+              }
+            ],
+            [
+              {
+                "row_span": 1,
+                "col_span": 1,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 0,
+                "end_col_offset_idx": 1,
+                "text": "Accuracy",
+                "column_header": false,
+                "row_header": false,
+                "row_section": false,
+                "fillable": false
+              },
+              {
+                "row_span": 1,
+                "col_span": 1,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 1,
+                "end_col_offset_idx": 2,
+                "text": "0.95",
+                "column_header": false,
+                "row_header": false,
+                "row_section": false,
+                "fillable": false
+              }
+            ]
+          ]
+        },
+        "annotations": []
+      }
+    ],
+    "key_value_items": [],
+    "form_items": [],
+    "pages": {}
+  },
+  "metadata": {
+    "filename": "sample_fixture.docx",
+    "file_extension": ".docx",
+    "element_count": 6,
+    "table_count": 1
+  }
+}
